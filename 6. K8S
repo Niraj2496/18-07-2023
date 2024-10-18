@@ -359,13 +359,13 @@ mv kops-linux-amd64 /usr/local/bin/kops
 #source .bashrc
 
 STEP-3: CREATE A BUCKET TO STORE CLUSTER INFO
-aws s3api create-bucket --bucket ccitdevops20233.k8s.local --region us-east-1 
-aws s3api put-bucket-versioning --bucket ccitdevops20233.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
-export KOPS_STATE_STORE=s3://ccitdevops20233.k8s.local
+aws s3api create-bucket --bucket manudevops2418.k8s.local --region us-east-1 
+aws s3api put-bucket-versioning --bucket manudevops2418.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
+export KOPS_STATE_STORE=s3://manudevops2418.k8s.local
 
 SETP-4: CREATE A CLUSTER AND RUN
-kops create cluster --name rahams.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.micro
-kops update cluster --name rahams.k8s.local --yes --admin
+kops create cluster --name manus.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.micro
+kops update cluster --name manus.k8s.local --yes --admin
 
 
 AUTOMATED SCRIPT:
